@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>churn-watch · 客户流失预警</title>
+<link rel="stylesheet" href="/css/app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='4' fill='%232a78d6'/%3E%3Cpath d='M4 10.5 7 7l2.2 2.2L12 5' stroke='white' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="app-header">
+  <div class="inner">
+    <div class="brand">
+      <span class="name">churn-watch</span>
+      <span class="tag">客户流失预警 · 版本化特征 / 可解释证据</span>
+    </div>
+    <div class="header-tools">
+      <label class="asof" for="asof-select">数据截止</label>
+      <select id="asof-select" aria-label="数据截止时间"></select>
+      <button id="theme-toggle" class="ghost sm" type="button" aria-label="切换明暗主题">◐ 主题</button>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="主导航">
+    <button data-view="overview" type="button">风险总览</button>
+    <button data-view="alerts" type="button">告警中心</button>
+    <button data-view="customer" type="button">客户档案</button>
+    <button data-view="versions" type="button">版本对比</button>
+    <button data-view="validation" type="button">验证与回溯</button>
+    <button data-view="audit" type="button">运行审计</button>
+  </nav>
+</header>
+<main id="app" aria-live="polite"></main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
